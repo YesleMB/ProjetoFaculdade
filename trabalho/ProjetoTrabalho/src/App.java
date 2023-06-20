@@ -20,7 +20,7 @@ public class App {
             atri.EscolhaGenero();
                         System.out.println("________________________________________");
 
-       
+      
         
         
     }
