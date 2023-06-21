@@ -1,11 +1,12 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class atributos extends App {
+public class atributos extends skillsAtributos {
     private int nivel = 1;
     public String nome;
     public String genero;
     public String raca;
+   
 
     public int getNivel() {
         return nivel;
@@ -86,16 +87,25 @@ public class atributos extends App {
             escolha = ler.nextInt();
             switch (escolha) {
                 case 1:
-                    System.out.println("Raça escolhida é: humano");
-                    validacao=true;
+                    System.out.println("Raça escolhida é: Humano");
+                     validacao=true;
+                     if(validacao){
+                        getRacaHumano();
+                     }
                     break;
                 case 2:
-                    System.out.println("Raça escolhida é: elfo");
+                    System.out.println("Raça escolhida é: Elfo");
                      validacao=true;
+                     if(validacao){
+                        getRacaElfo();
+                     }
                     break;
                 case 3:
-                    System.out.println("Raça escolhida é: anão");
+                    System.out.println("Raça escolhida é: Anão");
                      validacao=true;
+                     if(validacao){
+                        getRacaAnao();
+                     }
                     break;
                 default:
                     System.out.println("Opção inválida!");
