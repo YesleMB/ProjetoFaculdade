@@ -3,9 +3,11 @@ import java.util.Scanner;
 
 public class atributos extends skillsAtributos {
     private int nivel = 1;
-    public String nome;
-    public String genero;
-    public String raca;
+    private String nome;
+    private String genero;
+    private String raca;
+    private String classe;
+
    
 
     public int getNivel() {
@@ -40,6 +42,14 @@ public class atributos extends skillsAtributos {
         this.raca = raca;
     }
 
+    public String getClasse() {
+        return classe;
+    }
+
+    public void setClasse(String classe) {
+        this.classe = classe;
+    }
+
     public int EscolhaClasses() {
         Scanner ler = new Scanner(System.in);
 
@@ -53,15 +63,24 @@ public class atributos extends skillsAtributos {
                     case 1:
                         System.out.println("Classe escolhida é: Paladino");
                         validacao = true;
+                        if (validacao) {
+                            getClassPaladino();
+                        }
                         break;
                     case 2:
                         System.out.println("Classe escolhida é: Mago");
                         validacao = true;
+                        if (validacao) {
+                            getClassMago();
+                        }
 
                         break;
                     case 3:
                         System.out.println("Classe escolhida é: Arqueiro");
                         validacao = true;
+                        if (validacao) {
+                            getClassArqueiro();
+                        }
 
                         break;
                     default:
@@ -70,22 +89,23 @@ public class atributos extends skillsAtributos {
                 }
             } catch (InputMismatchException i) {
                 System.out.println("Entrada inválida! Certifique-se de digitar um número inteiro.");
-                   }
-                     ler.nextLine(); 
-   } while (!validacao);
-            return classe;
-       
+            }
+            ler.nextLine();
+        } while (!validacao);
+        return classe;
+
     }
 
     public int EscolhaRaca() {
         Scanner ler = new Scanner(System.in);
         System.out.println("Escolha uma raça (1: humano, 2: elfo, 3: anão): ");
-        int escolha = 0;
+       int raca= 0;
         boolean validacao = false;
         do{
         try {
-            escolha = ler.nextInt();
-            switch (escolha) {
+            raca = ler.nextInt();
+            switch (raca
+) {
                 case 1:
                     System.out.println("Raça escolhida é: Humano");
                      validacao=true;
@@ -116,41 +136,41 @@ public class atributos extends skillsAtributos {
             ler.nextLine();
         }
     }while(!validacao);
-        return escolha;
+        return             raca ;
+
     }
 
     public int EscolhaGenero() {
         Scanner ler = new Scanner(System.in);
 
         System.out.println("Escolha uma genero (1: masculino, 2: feminino, 3: não binario): ");
-            int gen = 0;
-            boolean validacao = false;
-do{
-        try {
-            gen = ler.nextInt();
-            switch (gen) {
-                case 1:
-                    System.out.println(" genero escolhida é: masculino");
-                     validacao=true;
-                    break;
-                case 2:
-                    System.out.println(" genero escolhida é: feminino");
-                     validacao=true;
-                    break;
-                case 3:
-                    System.out.println(" genero escolhida é: nao binario");
-                     validacao=true;
-                    break;
-                default:
+        int genero = 0;
+        boolean validacao = false;
+        do {
+            try {
+                genero = ler.nextInt();
+                switch (genero) {
+                    case 1:
+                        System.out.println(" genero escolhida é: masculino");
+                        validacao = true;
+                        break;
+                    case 2:
+                        System.out.println(" genero escolhida é: feminino");
+                        validacao = true;
+                        break;
+                    case 3:
+                        System.out.println(" genero escolhida é: nao binario");
+                        validacao = true;
+                        break;
+                    default:
 
-            }
-        } catch (InputMismatchException a) {
-            System.out.println("Entrada inválida! Certifique-se de digitar um número inteiro.");
+                }
+            } catch (InputMismatchException a) {
+                System.out.println("Entrada inválida! Certifique-se de digitar um número inteiro.");
                 ler.nextLine();
-        }
-    }while(!validacao);
-        return gen;
+            }
+        } while (!validacao);
+        return genero;
 
     }
-
 }
