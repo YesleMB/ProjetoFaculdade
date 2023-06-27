@@ -3,12 +3,51 @@ import java.util.Scanner;
 
 public class atributos extends skillsAtributos {
     private int nivel = 1;
-    private String nome;
-    private String genero;
-    private String raca;
-    private String classe;
+    public String nome;
+    public int genero;
+    public int raca;
+    public int classe;
+    public int id;
+    private String nomeClasse;
+    private String nomeRaca;
+    private String nomeGenero;
+    
 
-   
+    public String getNomeRaca() {
+         String nomeRaca = "";
+        switch (this.raca) {
+            case 1:
+                nomeRaca = "humano";
+                break;
+            case 2:
+                nomeRaca = "elfo";
+                break;
+            case 3:
+                nomeRaca = "anao";
+                break;
+            default:
+                nomeRaca = "Classe inválida";
+                break;}
+        return nomeRaca;
+    }
+
+    public String getNomeGenero() {
+        String nomeGenero = "";
+        switch (this.genero) {
+            case 1:
+                nomeRaca = "homem";
+                break;
+            case 2:
+                nomeRaca = "feminino";
+                break;
+            case 3:
+                nomeRaca = "nao binario";
+                break;
+            default:
+                nomeRaca = "Classe inválida";
+                break;}
+        return nomeGenero;
+    }
 
     public int getNivel() {
         return nivel;
@@ -22,67 +61,91 @@ public class atributos extends skillsAtributos {
         return nome;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setNome(String valorNome) {
+        
+        this.nome = valorNome;
     }
 
-    public String getGenero() {
+    public int getGenero() {
         return genero;
     }
 
-    public void setGenero(String genero) {
+    public void setGenero(int genero) {
         this.genero = genero;
     }
 
-    public String getRaca() {
+    public int getRaca() {
         return raca;
     }
 
-    public void setRaca(String raca) {
+    public void setRaca(int raca) {
         this.raca = raca;
     }
 
-    public String getClasse() {
+    public int getClasse() {
         return classe;
     }
 
-    public void setClasse(String classe) {
+    public void setClasse(int classe) {
+      int paladino;
         this.classe = classe;
     }
+     public int getId() {
+        return id;
+    }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void  Personagem() {
+        
+     
+        
+    }
+
+    public String getNomeClasse() {
+        String nomeClasse = "";
+        switch (this.classe) {
+            case 1:
+                nomeClasse = "Paladino";
+                getClassPaladino();
+                break;
+            case 2:
+                nomeClasse = "Mago";
+                getClassMago();
+
+                break;
+            case 3:
+                nomeClasse = "Arqueiro";
+             getClassArqueiro();
+                break;
+            default:
+                nomeClasse = "Classe inválida";
+                break;
+        }
+        return nomeClasse;
+    }
+
+   
     public int EscolhaClasses() {
         Scanner ler = new Scanner(System.in);
 
         System.out.println("Escolha a classe (1: Paladino, 2: Mago, 3: Arqueiro): ");
-        int classe = 0;
+       
         boolean validacao = false;
         do {
             try {
-                classe = ler.nextInt();
-                switch (classe) {
+                this.classe = ler.nextInt();
+                switch (this.classe) {
                     case 1:
-                        System.out.println("Classe escolhida é: Paladino");
+                       nomeClasse = "paladin";
                         validacao = true;
                         if (validacao) {
                             getClassPaladino();
                         }
                         break;
-                    case 2:
-                        System.out.println("Classe escolhida é: Mago");
-                        validacao = true;
-                        if (validacao) {
-                            getClassMago();
-                        }
-
-                        break;
-                    case 3:
-                        System.out.println("Classe escolhida é: Arqueiro");
-                        validacao = true;
-                        if (validacao) {
-                            getClassArqueiro();
-                        }
-
-                        break;
+                    
                     default:
                         System.out.println("Opção inválida!");
                         break;
@@ -99,12 +162,12 @@ public class atributos extends skillsAtributos {
     public int EscolhaRaca() {
         Scanner ler = new Scanner(System.in);
         System.out.println("Escolha uma raça (1: humano, 2: elfo, 3: anão): ");
-       int raca= 0;
+      
         boolean validacao = false;
         do{
         try {
-            raca = ler.nextInt();
-            switch (raca
+           this.raca = ler.nextInt();
+            switch (this.raca
 ) {
                 case 1:
                     System.out.println("Raça escolhida é: Humano");
@@ -136,7 +199,7 @@ public class atributos extends skillsAtributos {
             ler.nextLine();
         }
     }while(!validacao);
-        return             raca ;
+        return    raca ;
 
     }
 
@@ -144,12 +207,12 @@ public class atributos extends skillsAtributos {
         Scanner ler = new Scanner(System.in);
 
         System.out.println("Escolha uma genero (1: masculino, 2: feminino, 3: não binario): ");
-        int genero = 0;
+       
         boolean validacao = false;
         do {
             try {
-                genero = ler.nextInt();
-                switch (genero) {
+                this.genero = ler.nextInt();
+                switch (this.genero) {
                     case 1:
                         System.out.println(" genero escolhida é: masculino");
                         validacao = true;
@@ -173,4 +236,8 @@ public class atributos extends skillsAtributos {
         return genero;
 
     }
+
+   
 }
+
+   

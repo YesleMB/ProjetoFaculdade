@@ -1,65 +1,58 @@
-
-
-public class Personagem {
+public class Personagem extends atributos {
     private String nome;
-    private String raca;
-    private String classe;
-    private String genero;
-    private int nivel;
+    private int raca ;
+    private int classe;
+    private int genero ;
+    private int id;
 
-    // Construtor
-    public Personagem(String nome, String raca, String classe, String genero, int nivel) {
+
+    public Personagem(String nome, int raca, int classe, int genero, int id) {
+        //super();
         this.nome = nome;
         this.raca = raca;
         this.classe = classe;
         this.genero = genero;
-        this.nivel = nivel;
+        
+    }
+   
+    public void criarPersonagem(){
+        Personagem();
+
+    }
+    
+
+
+
+
+
+
+
+
+
+    
+
+    public void cadastrar() {
+        String sql = "INSERT INTO personagem (nome, raca, classe) VALUES ('" +
+                     this.getNome() + "', " +
+                     this.getRaca() + ", " +
+                     this.getClasse() + ")";
+        Conexao.executar(sql);
     }
 
-    // Getters e Setters
-    public String getNome() {
-        return nome;
+    public void editar() {
+        String sql = "UPDATE personagem SET " +
+                     "nome = '" + this.getNome() + "', " +
+                     "raca = " + this.getRaca() + ", " +
+                     "classe = " + this.getClasse() + " " +
+                     "WHERE id = " + this.getId();
+        Conexao.executar(sql);
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getRaca() {
-        return raca;
-    }
-
-    public void setRaca(String raca) {
-        this.raca = raca;
-    }
-
-    public String getClasse() {
-        return classe;
-    }
-
-    public void setClasse(String classe) {
-        this.classe = classe;
-    }
-
-    public String getGenero() {
-        return genero;
-    }
-
-    public void setGenero(String genero) {
-        this.genero = genero;
-    }
-
-    public int getNivel() {
-        return nivel;
-    }
-
-    public void setNivel(int nivel) {
-        this.nivel = nivel;
+    public static void excluir(int idPersonagem) {
+        String sql = "DELETE FROM personagem WHERE id = " + idPersonagem;
+        Conexao.executar(sql);
     }
 }
-
-
-
 
 
 

@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
  */
 public class Conexao {
     
-    private static final String URL = "jdbc:mysql://127.0.0.1:3306/faculdade?zeroDateTimeBehavior=convertToNull";
+    private static final String URL = "jdbc:mysql://127.0.0.1:3306/fichadepersonagem?zeroDateTimeBehavior=convertToNull";
     private static final String USER = "root";
     
     // para quem instalou o XAMPP
