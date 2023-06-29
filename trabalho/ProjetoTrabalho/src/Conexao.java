@@ -10,17 +10,17 @@ import javax.swing.JOptionPane;
  */
 public class Conexao {
     
-    private static final String URL = "jdbc:mysql://127.0.0.1:3306/fichadepersonagem?zeroDateTimeBehavior=convertToNull";
+    private static final String URL = "jdbc:mysql://127.0.0.1:3306/projetoFaculdade1?zeroDateTimeBehavior=convertToNull";
     private static final String USER = "root";
     
-    // para quem instalou o XAMPP
+    /* para quem instalou o XAMPP
     private static final String DRIVER = "com.mysql.jdbc.Driver";
-    private static final String SENHA = "";
-    
+    private static final String SENHA = "12345";
+     */
     
     // para quem não instalou o XAMPP ou está nos PCs da FADERGS
-    //    private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
-    //    private static final String SENHA = "root";
+    private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
+        private static final String SENHA = "root";
     
     public static void executar(String query){
         try {

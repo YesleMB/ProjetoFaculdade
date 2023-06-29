@@ -10,10 +10,12 @@ public class skillsAtributos {
     String[] classArqueiro = new String[3];
 
     public String[] getClassPaladino() {
-            System.out.println("Atributos da classe paladino");
+        System.out.println("Classe escolhida foi paladino:");    
+        System.out.println("Atributos da classe paladino");
         classPaladino[0] = "paladino ganha poder divino e benção da deusa";
         classPaladino[1] = "buff em usar armaduras pesadas com espada e escudo";
         classPaladino[2] = "dano ampliado contra mortos vivos/sofre mais dano de magia negra ";
+        System.out.println("_________________________________________________________________");
         for (String pa : classPaladino) {
             System.out.println(pa);
         }
@@ -25,10 +27,13 @@ public class skillsAtributos {
     }
 
     public String[] getClassMago() {
-            System.out.println("Atributos da classe mago");
+        System.out.println("Classe escolhida foi mago:");
+        System.out.println("Atributos da classe mago");
         classMago[0] = "arvore de magias e encantamentos desbloqueada";
         classMago[1] = "buff de 10% ao usar pergaminhos magicos";
         classMago[2] = "magias de vida cura voce e seus aliados";
+        System.out.println("_________________________________________________________________");
+
         for (String ma : classMago) {
             System.out.println(ma);
         }
@@ -40,10 +45,13 @@ public class skillsAtributos {
     }
 
     public String[] getClassArqueiro() {
-            System.out.println("Atributos da classe arqueiro");
+        System.out.println("Classe escolhida foi arqueiro:");   
+        System.out.println("Atributos da classe arqueiro");
         classArqueiro[0] = "aumento de dano baseado na distancia do alvo";
         classArqueiro[1] = "habilidades de camuflagem e invisibilidade desbloqueada";
-        classArqueiro[2] = "ao usar arco ganho de 30% de velocidade de ataque/ao usar besta ganho  de 15% de dano fisico";    
+        classArqueiro[2] = "ao usar arco ganho de 30% de velocidade de ataque/ao usar besta ganho  de 15% de dano fisico";   
+        System.out.println("_________________________________________________________________");
+ 
         for (String ar : classArqueiro) {
             System.out.println(ar);
         }
@@ -55,10 +63,13 @@ public class skillsAtributos {
     }
 
     public String[] getRacaHumano() {
+        System.out.println("Raça escolhida foi: Humana");
             System.out.println("Atributos da raça humana:");
         racaHumano[0] = "100 pontos de vida";
         racaHumano[1] = "expectativa de vida maxima de 70 anos";
         racaHumano[2] = "porcentagem de afinidade com magia aleatoria";
+                System.out.println("_________________________________________________________________");
+
 
         for (String ra : racaHumano) {
             System.out.println(ra);
@@ -71,10 +82,13 @@ public class skillsAtributos {
     }
 
     public String[] getRacaElfo() {
+        System.out.println("Raça escolhida foi: Elfo");
             System.out.println("Atributos da raça Elfo:");
         racaElfo[0] = "350 pontos de vida";
         racaElfo[1] = "expectativa de vida maxima 900 anos";
         racaElfo[2] = "alta afinidade com magia";
+                System.out.println("_________________________________________________________________");
+
         for (String ra : racaElfo) {
             System.out.println(ra);
         }
@@ -86,10 +100,13 @@ public class skillsAtributos {
     }
 
     public String[] getRacaAnao() {
+        System.out.println("Raça escolhida foi: Anão");
             System.out.println("Atributos da raça anao:");
         racaAnao[0] = "500 pontos de vida";
         racaAnao[1] = "expectativa de vida 500 anos";
         racaAnao[2] = "baixa afinidade com magia";
+        System.out.println("_________________________________________________________________");
+
         for (String ra : racaAnao) {
             System.out.println(ra);
         }

@@ -13,41 +13,7 @@ public class atributos extends skillsAtributos {
     private String nomeGenero;
     
 
-    public String getNomeRaca() {
-         String nomeRaca = "";
-        switch (this.raca) {
-            case 1:
-                nomeRaca = "humano";
-                break;
-            case 2:
-                nomeRaca = "elfo";
-                break;
-            case 3:
-                nomeRaca = "anao";
-                break;
-            default:
-                nomeRaca = "Classe inválida";
-                break;}
-        return nomeRaca;
-    }
-
-    public String getNomeGenero() {
-        String nomeGenero = "";
-        switch (this.genero) {
-            case 1:
-                nomeRaca = "homem";
-                break;
-            case 2:
-                nomeRaca = "feminino";
-                break;
-            case 3:
-                nomeRaca = "nao binario";
-                break;
-            default:
-                nomeRaca = "Classe inválida";
-                break;}
-        return nomeGenero;
-    }
+   
 
     public int getNivel() {
         return nivel;
@@ -87,7 +53,7 @@ public class atributos extends skillsAtributos {
     }
 
     public void setClasse(int classe) {
-      int paladino;
+      
         this.classe = classe;
     }
      public int getId() {
@@ -98,10 +64,45 @@ public class atributos extends skillsAtributos {
         this.id = id;
     }
 
-    public void  Personagem() {
-        
-     
-        
+   
+     public String getNomeRaca() {
+         String nomeRaca = "";
+        switch (this.raca) {
+            case 1:
+                nomeRaca = "humano";
+                getRacaHumano();
+                
+                break;
+            case 2:
+                nomeRaca = "elfo";
+                getRacaElfo();
+                break;
+            case 3:
+                nomeRaca = "anao";
+                getRacaAnao();
+                break;
+            default:
+                nomeRaca = "Classe inválida";
+                break;}
+        return nomeRaca;
+    }
+
+    public String getNomeGenero() {
+        String nomeGenero = "";
+        switch (this.genero) {
+            case 1:
+                nomeGenero = "homem";
+                break;
+            case 2:
+                nomeGenero = "feminino";
+                break;
+            case 3:
+                nomeGenero = "nao binario";
+                break;
+            default:
+                nomeGenero = "Classe inválida";
+                break;}
+        return nomeGenero;
     }
 
     public String getNomeClasse() {
@@ -118,14 +119,16 @@ public class atributos extends skillsAtributos {
                 break;
             case 3:
                 nomeClasse = "Arqueiro";
-             getClassArqueiro();
+                getClassArqueiro();
                 break;
             default:
                 nomeClasse = "Classe inválida";
                 break;
-        }
+        } 
         return nomeClasse;
     }
+    
+
 
    
     public int EscolhaClasses() {
@@ -139,12 +142,26 @@ public class atributos extends skillsAtributos {
                 this.classe = ler.nextInt();
                 switch (this.classe) {
                     case 1:
-                       nomeClasse = "paladin";
+                       nomeClasse = "";
                         validacao = true;
                         if (validacao) {
                             getClassPaladino();
                         }
                         break;
+                    case 2:
+                            nomeClasse = "";
+                        validacao = true;
+                        if (validacao) {
+                            getClassMago();
+                        }
+                        break;
+                    case 3:
+                        nomeClasse = "";
+                        validacao = true;
+                        if (validacao) {
+                            getClassArqueiro();
+                        }
+                        break;        
                     
                     default:
                         System.out.println("Opção inválida!");
@@ -167,29 +184,30 @@ public class atributos extends skillsAtributos {
         do{
         try {
            this.raca = ler.nextInt();
-            switch (this.raca
-) {
+            switch (this.raca) {
                 case 1:
-                    System.out.println("Raça escolhida é: Humano");
+                    nomeRaca="";
                      validacao=true;
                      if(validacao){
                         getRacaHumano();
                      }
                     break;
                 case 2:
-                    System.out.println("Raça escolhida é: Elfo");
+                nomeRaca="";
                      validacao=true;
                      if(validacao){
                         getRacaElfo();
                      }
                     break;
                 case 3:
-                    System.out.println("Raça escolhida é: Anão");
+                    nomeRaca="";
                      validacao=true;
                      if(validacao){
                         getRacaAnao();
                      }
-                    break;
+                    break;     
+                    
+               
                 default:
                     System.out.println("Opção inválida!");
                     break;
@@ -214,17 +232,18 @@ public class atributos extends skillsAtributos {
                 this.genero = ler.nextInt();
                 switch (this.genero) {
                     case 1:
-                        System.out.println(" genero escolhida é: masculino");
+                        nomeGenero = "";
                         validacao = true;
                         break;
                     case 2:
-                        System.out.println(" genero escolhida é: feminino");
+                          nomeGenero = "";
                         validacao = true;
                         break;
                     case 3:
-                        System.out.println(" genero escolhida é: nao binario");
+                          nomeGenero = "";
                         validacao = true;
-                        break;
+                        break;        
+                  
                     default:
 
                 }
