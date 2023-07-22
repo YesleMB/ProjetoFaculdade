@@ -1,0 +1,22 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "wesley_mendes",
+            "database": "projeto",
+            "username": "root",
+            "password": "12345"
+        }
+    ],
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "ProjetoTrabalho/lib/mysql-connector-j-8.0.33.jar"
+    ]
+}

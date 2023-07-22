@@ -1,3 +1,5 @@
+package inimigos;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -5,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class Conexao  extends atributos{
+public class Conexao  extends atributosInimigos{
     private static final String URL = "jdbc:mysql://localhost:3306/projeto"; // Substitua pelo URL do seu banco de dados
     private static final String USUARIO = "root"; // Substitua pelo nome de usuário do seu banco de dados
     private static final String SENHA = "12345"; // Substitua pela senha do seu banco de dados
